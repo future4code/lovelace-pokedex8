@@ -5,16 +5,16 @@ import Pokedex from "../pages/Pokedex/Pokedex";
 import DetailsPage from "../pages/DetailsPage/DetailsPage";
 
 
-const Router = () => {
+function Router() {
     return (
         <BrowserRouter>
           <Switch>
 
             <Route exact path="/">
-              <Home />
+              <Home/>
             </Route>
     
-            <Route exact path="/pokedex">
+            <Route exact path="/Pokedex">
               <Pokedex />
             </Route>
 

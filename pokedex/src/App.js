@@ -4,7 +4,13 @@ import Home from "./pages/Home/Home";
 import Router from "./router/Router"
 
 const App = () => {
-  return <Router/>
+  return (
+    <div>
+    
+    <Router/>
+    </div>
+  )
+  
   
 };
 
