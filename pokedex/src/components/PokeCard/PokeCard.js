@@ -2,7 +2,7 @@ import React from "react"
 
 
 
-const PokeCard = () => {
+function PokeCard() {
     return(
         <PokeCard>
             <p>Nome do pokemon</p>
