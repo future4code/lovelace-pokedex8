@@ -1,10 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import Pokedex from "../pages/Pokedex";
-import DetailsPage from "../pages/DetailsPage";
-import ErrorPage from "../pages/ErrorPage";
-
+import Home from "../pages/Home/Home";
+import Pokedex from "../pages/Pokedex/Pokedex";
+import DetailsPage from "../pages/DetailsPage/DetailsPage";
 
 
 const Router = () => {
@@ -21,13 +19,10 @@ const Router = () => {
             </Route>
 
             <Route exact path="/details">
-              <DetailsPage />
+              <DetailsPage/>
             </Route>
 
-            <Route >
-              <ErrorPage />
-            </Route>
-
+            
           </Switch>
         </BrowserRouter>
       );

@@ -1,10 +1,11 @@
 import React from "react"
+import PokeCard from "../../components/PokeCard/PokeCard";
 
 
 
 const Home = () => {
     return (
-        <p>HOME</p>
+        <PokeCard/>
       );
     };
     
