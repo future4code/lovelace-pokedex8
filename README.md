@@ -1,9 +1,9 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Glayton Verissimo de Oliveira
+- Lucas Lameirinhas
+- Tuana Sampaio de Souza Fernandes
 
 Link do Surge: www.link.com.br
 
