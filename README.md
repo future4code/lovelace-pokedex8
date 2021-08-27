@@ -12,7 +12,7 @@ O que funciona:
 - Botão de adicionar;
 - Botão de detalhes 
 - Troca de páginas;
-- Renderização da imagem, moves e type do pokemon;
+- Renderização na tela de detalhes da imagem, moves e type do pokemon;
 
 O que não funciona: 
 - Renderização das informações do pokemon na página de detalhes ao acessá-la da pokedex;
