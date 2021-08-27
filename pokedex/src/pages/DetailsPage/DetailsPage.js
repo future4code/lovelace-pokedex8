@@ -40,8 +40,9 @@ function DetailsPage () {
     //batendo na API de detalhes do pokemon e incluindo o parametro "nome"
     const pokemon = useRequestData(`https://pokeapi.co/api/v2/pokemon/${params.nome}`, {})
 
+    const pokemonAbility = useRequestData(`https://pokeapi.co/api/v2/ability/${pokemon.id}`, {})
+
     console.log(pokemon)
-    
     
 
     const goToHome = () => {
@@ -66,21 +67,24 @@ function DetailsPage () {
                         {pokemon.sprites && pokemon.sprites.back_default && <ImagePoke src = {pokemon.sprites.back_default}/> }
                     </section>
             <ContainerItems>
-              <h4>Stats:</h4>
+              <h2>Stats:</h2>
               
-                    <p>Hp:</p>
-                    <p>Attack:</p>
-                    <p>deffense:</p>
-                    <p>Special attack:</p>
-                    <p>Special deffense:</p>
-                    <p>Speed:</p>
+                    <p>Id: <b>{pokemon.id}</b></p>
+                    <p>Type 1: <b>{pokemon.types && pokemon.types[0].type.name}</b></p>
+                    <p>Type 2: <b>{pokemon.types &&pokemon.types[1].type.name}</b></p>
+                    <p>Hp: <b>{pokemon.stats && pokemon.stats[0].stat.url}</b></p>
+                    <p>Attack: <b>{pokemon.stats && pokemon.stats[1].stat.url}</b></p>
+                    <p>Deffense: <b>{pokemon.stats && pokemon.stats[2].stat.url}</b></p>
+                    <p>Special attack: <b>{pokemon.stats && pokemon.stats[3].stat.url}</b></p>
+                    <p>Special deffense: <b>{pokemon.stats && pokemon.stats[4].stat.url}</b></p>
+                    <p>Speed: <b>{pokemon.stats && pokemon.stats[5].stat.url}</b></p>
             </ContainerItems>
 
             <ContainerItems>
-                <h4>Moves</h4>
+                <h2>Moves</h2>
                             
-                          <p>Move name 1 </p>
-                         <p>Move name 2</p>        
+                          <p><b>{pokemon.moves && pokemon.moves[0].move.name}</b></p>
+                         <p><b>{pokemon.moves && pokemon.moves[1].move.name}</b></p>        
             </ContainerItems>
 
             </ContainerDetails>

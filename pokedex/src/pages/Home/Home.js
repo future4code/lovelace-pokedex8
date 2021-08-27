@@ -7,6 +7,7 @@ import { goToDetailPage } from "../../router/coodinator";
 import { goToPokedex } from "../../router/coodinator";
 import GlobalContext from "../../global/GlobalContext";
 
+
 const CardPokemonList = styled.ul`
     border: 2px solid #000;
     width:30%;
@@ -40,11 +41,14 @@ function Home (props) {
   }
   console.log(pokemonsList)
 
+
   //transformando o array de strings em array de componentes para serem mostrados na tela:
   // verificando se existe o results primeiro, caso exista, faz-se o map
   const pokemonsComponents = pokemonsList.results && pokemonsList.results.map((poke)=>{
     return <CardPokemonList key = {poke.name}> 
       <h2> {poke.name} </h2> 
+      
+    
       <Pokemon>
       
       <button onClick = {(()=>goToDetailPage(poke.name))} > Ver detalhes </button>
