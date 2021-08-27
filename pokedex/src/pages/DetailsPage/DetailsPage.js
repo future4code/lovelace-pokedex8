@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import { useHistory, useParams } from "react-router-dom";
 import styled from "styled-components";
+import GlobalContext from "../../global/GlobalContext";
 import useRequestData from "../../hooks/useRequestData";
 
 const ContainerDetails = styled.div`
@@ -31,6 +32,7 @@ const ImagePoke = styled.img`
 
 
 function DetailsPage () {
+    const {state, setters, requests} = useContext(GlobalContext)
     const history = useHistory()
     //ter acesso ao parametro que está na url, usando o hook useParams
     const params = useParams()
@@ -39,6 +41,7 @@ function DetailsPage () {
     const pokemon = useRequestData(`https://pokeapi.co/api/v2/pokemon/${params.nome}`, {})
 
     console.log(pokemon)
+    
     
 
     const goToHome = () => {
@@ -51,7 +54,7 @@ function DetailsPage () {
                 
                 {pokemon.name && <h1> {pokemon.name} </h1>} 
 
-                <button >Adicionar/Remover da pokedex</button>
+                <button>Adicionar/Remover da pokedex</button>
             </Cabecalho>
 
             <ContainerDetails>
@@ -75,6 +78,7 @@ function DetailsPage () {
 
             <ContainerItems>
                 <h4>Moves</h4>
+                            
                           <p>Move name 1 </p>
                          <p>Move name 2</p>        
             </ContainerItems>
