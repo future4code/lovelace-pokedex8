@@ -19,7 +19,7 @@ function Pokedex () {
     return <div key = {item.name}>
     <ul> 
         <li><p>Nome do pokemon {item.name} </p>
-        <img /> 
+         
             <button onClick={() => setters.removePokeFromPokedex(item.name)}>Remover da pokedex</button>
             <button onClick = {(()=>goToDetailPage(item.name))} >Detalhes</button>
             </li>
