@@ -17,3 +17,4 @@ O que não funciona:
 - Renderização das informações do pokemon na página de detalhes ao acessá-la da pokedex;
 - Função de remover pokemon da tela home ao ser adicionado à pokedex;
 - Função de remover pokemon da pokedex;
+- Renderização de detalhes do stats do pokemon;
