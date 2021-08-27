@@ -12,9 +12,10 @@ O que funciona:
 - Botão de adicionar;
 - Botão de detalhes 
 - Troca de páginas;
+- Renderização da imagem, moves e type do pokemon;
 
 O que não funciona: 
 - Renderização das informações do pokemon na página de detalhes ao acessá-la da pokedex;
 - Função de remover pokemon da tela home ao ser adicionado à pokedex;
 - Função de remover pokemon da pokedex;
-- Renderização de detalhes do stats do pokemon;
+- Renderização de todos os detalhes do stats do pokemon;
