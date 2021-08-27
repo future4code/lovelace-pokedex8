@@ -1,14 +1,12 @@
 import React from "react"
-import PokeCard from "./components/PokeCard/PokeCard";
-import Home from "./pages/Home/Home";
+import GlobalState from "./global/GlobalState";
 import Router from "./router/Router"
 
 const App = () => {
   return (
-    <div>
-    
-    <Router/>
-    </div>
+    <GlobalState>
+        <Router/>
+    </GlobalState>
   )
   
   

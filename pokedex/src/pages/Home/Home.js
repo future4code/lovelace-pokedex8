@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useContext } from "react"
 import PokeCard from "../../components/PokeCard/PokeCard";
 import { useHistory } from "react-router-dom";
 import useRequestData from "../../hooks/useRequestData";
 import styled from "styled-components";
 import { goToDetailPage } from "../../router/coodinator";
 import { goToPokedex } from "../../router/coodinator";
+import GlobalContext from "../../global/GlobalContext";
 
 const CardPokemonList = styled.ul`
     border: 2px solid #000;
@@ -23,11 +24,11 @@ const Pokemon = styled.section`
   background-color: transparent;
 `
 
-function Home () {
+function Home (props) {
   
   //usando o hook requestData para bater na API
   const pokemonsList = useRequestData("https://pokeapi.co/api/v2/pokemon", [])
-
+  const {state, setters, requests} = useContext(GlobalContext)
   const history = useHistory()
 
   const goToPokedex = () => {
@@ -37,6 +38,7 @@ function Home () {
   const goToDetailPage = (name) => {
     history.push(`/details/${name}`)
   }
+  console.log(pokemonsList)
 
   //transformando o array de strings em array de componentes para serem mostrados na tela:
   // verificando se existe o results primeiro, caso exista, faz-se o map
@@ -47,7 +49,7 @@ function Home () {
       
       <button onClick = {(()=>goToDetailPage(poke.name))} > Ver detalhes </button>
          
-      <button>Adicionar à pokedex</button>
+      <button onClick = {()=>setters.addToPokedex(poke.name)}>Adicionar à pokedex</button>
       
       </Pokemon>
       </CardPokemonList>
